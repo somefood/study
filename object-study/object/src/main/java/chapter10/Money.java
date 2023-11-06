@@ -1,4 +1,4 @@
-package chatper10;
+package chapter10;
 
 import java.math.BigDecimal;
 

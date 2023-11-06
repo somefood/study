@@ -1,8 +1,6 @@
-package chatper10;
+package chapter10;
 
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
 
 public class NightlyDiscountPhone extends Phone {
 
