@@ -21,4 +21,9 @@ public class RegularPhone extends Phone {
     protected Money afterCalculated(Money fee) {
         return fee;
     }
+
+    @Override
+    protected Money afterCalculated(Call call) {
+        return null;
+    }
 }
