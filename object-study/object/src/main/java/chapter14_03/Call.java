@@ -1,17 +1,15 @@
 package chapter14_03;
 
-import chapter14.DateTimeInterval;
-
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.List;
 
 public class Call {
 
-    private chapter14.DateTimeInterval interval;
+    private DateTimeInterval interval;
 
     public Call(LocalDateTime from, LocalDateTime to) {
-        this.interval = chapter14.DateTimeInterval.of(from, to);
+        this.interval = DateTimeInterval.of(from, to);
     }
 
     public Duration getDuration() {
@@ -26,7 +24,7 @@ public class Call {
         return interval.getTo();
     }
 
-    public chapter14.DateTimeInterval getInterval() {
+    public DateTimeInterval getInterval() {
         return interval;
     }
 
