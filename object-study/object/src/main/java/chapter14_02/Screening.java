@@ -14,11 +14,13 @@ public class Screening {
     private LocalDateTime whenScreened;
 
     public chapter05.Reservation reserve(Customer customer, int audienceCount) {
-        return new Reservation(customer, this, calculateFee(audienceCount), audienceCount);
+//        return new Reservation(customer, this, calculateFee(audienceCount), audienceCount);
+        return null;
     }
 
     private Money calculateFee(int audienceCount) {
-        return movie.calculateMoiveFee(this).times(audienceCount);
+//        return movie.calculateMoiveFee(this).times(audienceCount);
+        return null;
     }
 
     public LocalDateTime getWhenScreened() {
