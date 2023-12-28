@@ -28,4 +28,18 @@ public class HelloApiTest {
         // body Hello Spring
         assertThat(res.getBody()).isEqualTo("Hello Spring");
     }
+
+    @Test
+    void failsHelloApi() {
+        // http localhost:8080/hello?name=Spring
+        // HTTPie
+
+        TestRestTemplate rest = new TestRestTemplate(); // 기존 RestTemplate은 에러는 예외 터트려서 좀 더 순수하게 사용하려면 이거 사용
+        ResponseEntity<String> res =
+                rest.getForEntity("http://localhost:8080/hello?name=", String.class);
+
+        // status 200
+        // AssertJ는 스프링 initializer 프로젝트 만들면 들어오게 됨
+        assertThat(res.getStatusCode()).isEqualTo(HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 }
