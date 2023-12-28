@@ -1,5 +1,6 @@
-package me.somefood.tobyspring;
+package me.somefood.config;
 
+import me.somefood.config.EnableMyAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -13,5 +14,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 @Configuration
 @ComponentScan
-public @interface MySpringBootAnnotation {
+@EnableMyAutoConfiguration
+public @interface MySpringBootApplication {
 }
