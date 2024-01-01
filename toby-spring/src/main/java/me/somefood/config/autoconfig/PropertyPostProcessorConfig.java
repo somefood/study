@@ -19,10 +19,11 @@ public class PropertyPostProcessorConfig {
     @Bean
     BeanPostProcessor propertyPostProcessor(Environment environment) {
         return new BeanPostProcessor() {
+            // 모든 빈 초기화가 끝나면 이 프로세스를 거치게 됨
             @Override
             public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
                 MyConfigurationProperties annotation = findAnnotation(bean.getClass(), MyConfigurationProperties.class);
-                if (annotation == null) return bean;
+                if (annotation == null) return bean; // 없으면 처리하지 않고 그냥 return
 
                 Map<String, Object> attrs = AnnotationUtils.getAnnotationAttributes(annotation);
                 String prefix = (String) attrs.get("prefix");
