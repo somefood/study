@@ -24,6 +24,11 @@ public class HelloController {
             throw new IllegalArgumentException();
         }
 
-        return helloService.sayHello(Objects.requireNonNull(name));
+        return helloService.sayHello(name);
+    }
+
+    @GetMapping("/count")
+    public String count(@RequestParam("name") String name) {
+        return name + ": " + helloService.countOf(name);
     }
 }

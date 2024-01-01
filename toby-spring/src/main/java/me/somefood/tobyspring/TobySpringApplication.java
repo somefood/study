@@ -1,10 +1,9 @@
 package me.somefood.tobyspring;
 
+import jakarta.annotation.PostConstruct;
 import me.somefood.config.MySpringBootApplication;
-import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.core.env.Environment;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 @MySpringBootApplication
 public class TobySpringApplication {
@@ -17,6 +16,17 @@ public class TobySpringApplication {
 //            System.out.println("my.name: " + name);
 //        };
 //    }
+    private final JdbcTemplate jdbcTemplate;
+
+    public TobySpringApplication(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
+
+    @PostConstruct
+        // InitializingBean 을 간결하게 쓸 수 있는 방법
+    void init() {
+        jdbcTemplate.execute("create table if not exists hello(name varchar(50) primary key, count int)");
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(TobySpringApplication.class, args);
