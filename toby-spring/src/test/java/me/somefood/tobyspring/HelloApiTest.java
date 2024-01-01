@@ -18,7 +18,7 @@ public class HelloApiTest {
 
         TestRestTemplate rest = new TestRestTemplate(); // 기존 RestTemplate은 에러는 예외 터트려서 좀 더 순수하게 사용하려면 이거 사용
         ResponseEntity<String> res =
-                rest.getForEntity("http://localhost:8080/app/hello?name={name}", String.class, "Spring");
+                rest.getForEntity("http://localhost:9090/app/hello?name={name}", String.class, "Spring");
 
         // status 200
         // AssertJ는 스프링 initializer 프로젝트 만들면 들어오게 됨
@@ -36,7 +36,7 @@ public class HelloApiTest {
 
         TestRestTemplate rest = new TestRestTemplate(); // 기존 RestTemplate은 에러는 예외 터트려서 좀 더 순수하게 사용하려면 이거 사용
         ResponseEntity<String> res =
-                rest.getForEntity("http://localhost:8080/app/hello?name=", String.class);
+                rest.getForEntity("http://localhost:9090/app/hello?name=", String.class);
 
         // status 200
         // AssertJ는 스프링 initializer 프로젝트 만들면 들어오게 됨
