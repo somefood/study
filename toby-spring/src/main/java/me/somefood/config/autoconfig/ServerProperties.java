@@ -1,5 +1,9 @@
 package me.somefood.config.autoconfig;
 
+
+import me.somefood.config.MyConfigurationProperties;
+
+@MyConfigurationProperties(prefix = "server")
 public class ServerProperties {
 
     private String contextPath;
