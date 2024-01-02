@@ -1,11 +1,11 @@
 package me.somefood.tobyspring;
 
 import jakarta.annotation.PostConstruct;
-import me.somefood.config.MySpringBootApplication;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-@MySpringBootApplication
+@SpringBootApplication
 public class TobySpringApplication {
 
     // 스프링 구성 다 되고 실행되는 코드
