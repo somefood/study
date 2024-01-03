@@ -1,4 +1,4 @@
-package mycode.chatper4;
+package mycode.chapter4;
 
 public class AttackPower {
     static final int MIN = 0;
