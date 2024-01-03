@@ -1,6 +1,0 @@
-me.somefood.config.autoconfig.TomcatWebServerConfig
-me.somefood.config.autoconfig.JettyWebServerConfig
-me.somefood.config.autoconfig.DispatcherServletConfig
-me.somefood.config.autoconfig.PropertyPlaceholderConfig
-me.somefood.config.autoconfig.PropertyPostProcessorConfig
-me.somefood.config.autoconfig.DataSourceConfig
