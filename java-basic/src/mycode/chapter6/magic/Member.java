@@ -39,14 +39,14 @@ public class Member {
     }
 
     void consumeMagicPoint(final Magic magic) {
-        final int costMagicPoint = magic.costMagicPoint();
+        final int costMagicPoint = magic.costMagicPoint().point;
     }
 
     void consumeTechnicalPoint(final Magic magic) {
-        final int costTechnicalPoint = magic.costTechnicalPoint();
+        final int costTechnicalPoint = magic.costTechnicalPoint().value;
     }
 
     void magicDamage(final Magic magic) {
-        final int attackPower = magic.attackPower();
+        final int attackPower = magic.attackPower().value;
     }
 }
